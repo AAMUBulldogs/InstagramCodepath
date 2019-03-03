@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.instagram.fragmentPackage.ComposeFragment;
 import com.example.instagram.fragmentPackage.PostsFragment;
+import com.example.instagram.fragmentPackage.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                         //Toast.makeText(MainActivity.this, "HomeScreen", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_profile:
-                        fragment = new ComposeFragment();
+                        fragment = new ProfileFragment();
                         //Toast.makeText(MainActivity.this, "ProfileScreen", Toast.LENGTH_SHORT).show();
                         break;
                     case R.id.action_compose:

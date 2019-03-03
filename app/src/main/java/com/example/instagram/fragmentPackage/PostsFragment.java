@@ -26,9 +26,9 @@ public class PostsFragment extends Fragment {
     public static final String TAG ="PostsFragment";
 
     private RecyclerView rvPosts;
-    private PostsAdapter adapter;
+    protected PostsAdapter adapter;
     private List<Post> mPosts;
-    private SwipeRefreshLayout swipeContainer;
+    protected SwipeRefreshLayout swipeContainer;
 
     //onCreateView to inflate the view
     @Nullable
@@ -68,7 +68,7 @@ public class PostsFragment extends Fragment {
         rvPosts.setLayoutManager(new LinearLayoutManager(getContext()));
         queryPost();
     }
-    private void queryPost() {
+    protected void queryPost() {
         ParseQuery<Post> postQuery = new ParseQuery<Post>(Post.class);
         postQuery.include(Post.KEY_USER);
         postQuery.setLimit(20);
